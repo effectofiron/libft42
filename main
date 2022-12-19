@@ -1,0 +1,6 @@
+/*
+int main()
+{
+    char s[] = "seldemir";
+    printf("%ld", ft_strlen(s))
+}
