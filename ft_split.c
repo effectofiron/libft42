@@ -19,7 +19,7 @@ static size_t	count_words(char const *s, char c)
     return (count);
 }
 
-char			**ft_split(char const *s, char c)
+char    **ft_split(char const *s, char c)
 {
     char **new;
     size_t start;
