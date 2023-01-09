@@ -6,19 +6,18 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:51:11 by seldemir          #+#    #+#             */
-/*   Updated: 2022/12/15 15:36:20 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/09 14:49:50 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *s)
+size_t	ft_strlen(char *s)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return i;
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
-

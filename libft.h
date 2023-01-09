@@ -6,7 +6,7 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:54:38 by seldemir          #+#    #+#             */
-/*   Updated: 2022/12/15 16:19:19 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/09 13:00:28 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-int  tolower(int c);
+int  ft_tolower(int c);
 int		ft_toupper(int c);
 
 #endif

@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/09 12:06:26 by seldemir          #+#    #+#             */
+/*   Updated: 2023/01/09 16:23:27 by seldemir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t		ft_nb_len(int nb)
+size_t	ft_nb_len(int nb)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nb <= 0)
@@ -15,7 +27,7 @@ size_t		ft_nb_len(int nb)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	char	*str;
@@ -23,7 +35,7 @@ char		*ft_itoa(int n)
 
 	len = ft_nb_len(n);
 	nb = n;
-	if (!(str = malloc(sizeof(char) * len + 1)))
+	if (!(str == malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	if (nb < 0)
 	{
@@ -41,5 +53,3 @@ char		*ft_itoa(int n)
 	}
 	return (str);
 }
-
-

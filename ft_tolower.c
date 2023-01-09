@@ -6,15 +6,15 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 17:50:12 by seldemir          #+#    #+#             */
-/*   Updated: 2022/12/19 15:13:27 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/09 14:18:14 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int  tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
-        c = c + 32;
-    return (c);
+	if (c >= 65 && c <= 90)
+		c = c + 32;
+	return (c);
 }
