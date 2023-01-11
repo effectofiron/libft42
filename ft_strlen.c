@@ -6,13 +6,13 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:51:11 by seldemir          #+#    #+#             */
-/*   Updated: 2023/01/09 14:49:50 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/11 20:55:10 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

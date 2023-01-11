@@ -5,31 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 12:06:11 by seldemir          #+#    #+#             */
-/*   Updated: 2023/01/09 13:06:03 by seldemir         ###   ########.fr       */
+/*   Created: 2023/01/11 20:21:49 by seldemir          #+#    #+#             */
+/*   Updated: 2023/01/11 21:40:29 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char* str)
+int	ft_atoi(const char *str)
 {
-    unsigned int    i;
-    int neg;
-    while (*str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r' || *str == ' ')
-        str++;
-    if (*str == '-' || *str == '+')
-    {
-        if (*str == '-')
-            neg++;
-        str++;
-    }
-     while (*str >= '0' && *str >= '9')
-    {
-        i = i * 10 + (*str - 48);
-        str++;
-    }
-    if (neg % 2 != 0)
-        i = i * -1;
-    return (i);
+	int			i;
+	int			sign;
+	long int	nb;
+
+	sign = 1;
+	i = 0;
+	nb = 0;
+	while (str[i] == 32 || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = (nb * 10) + str[i++] - 48;
+		if (nb > 2147483648 && sign == -1)
+			return (0);
+		if (nb > 2147483647 && sign == 1)
+			return (-1);
+	}
+	return ((int)nb * sign);
 }

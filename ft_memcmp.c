@@ -6,7 +6,7 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:47:55 by seldemir          #+#    #+#             */
-/*   Updated: 2023/01/09 16:19:30 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/11 22:03:33 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (n)
+	size_t		i;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*(unsigned char *)s1 != *(unsigned char *)s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
-			++s1;
-			++s2;
+		if (*((unsigned char *)s1 + i) == *((unsigned char *)s2 + i))
+			i++;
+		else
+			return ((*((unsigned char *)s1 + i)) - *((unsigned char *)s2 + i));
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 12:06:26 by seldemir          #+#    #+#             */
-/*   Updated: 2023/01/09 16:23:27 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/11 20:25:25 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ char	*ft_itoa(int n)
 
 	len = ft_nb_len(n);
 	nb = n;
-	if (!(str == malloc(sizeof(char) * len + 1)))
+	str = malloc(sizeof(char) * len + 1);
+	if (!str)
 		return (NULL);
 	if (nb < 0)
 	{

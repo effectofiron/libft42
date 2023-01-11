@@ -6,7 +6,7 @@
 /*   By: seldemir <seldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 12:06:43 by seldemir          #+#    #+#             */
-/*   Updated: 2023/01/09 16:29:22 by seldemir         ###   ########.fr       */
+/*   Updated: 2023/01/11 20:01:57 by seldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putendl_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return (0);
+		return ;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
